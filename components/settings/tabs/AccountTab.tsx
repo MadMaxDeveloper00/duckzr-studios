@@ -174,7 +174,7 @@ export default function AccountTab() {
 
       }
 
-      await refreshUser();
+      await refreshUser?.();
 
       setEditing(false);
 
@@ -791,7 +791,7 @@ export default function AccountTab() {
 
                     <h4 className="font-semibold">
                       {new Date(
-                        user?.createdAt
+                        user?.createdAt || ""
                       ).toLocaleDateString()}
                     </h4>
 

@@ -14,6 +14,17 @@ type User = {
   tag: string;
   avatar: string;
   role: string;
+  usernameChangedAt?: string;
+  tagChangedAt?: string;
+  token: string;
+  displayRole?: string;
+  googleLinked?: boolean;
+  discordLinked?: boolean;
+  createdAt: string;
+  rawPassword?: string;
+  verified?: boolean;
+  banner?: string;
+  twoFactorEnabled?: boolean;
 };
 
 type AuthContextType = {
@@ -26,6 +37,12 @@ type AuthContextType = {
   setToken: (token: string | null) => void;
 
   logout: () => void;
+
+  refreshUser?: () => Promise<void>;
+};
+
+const refreshUser = async () => {
+  // futura chamada API
 };
 
 const AuthContext =
@@ -52,7 +69,11 @@ export function AuthProvider({
       localStorage.getItem("duckzr_token");
 
     if (savedUser) {
-      setUser(JSON.parse(savedUser));
+      try {
+            setUser(JSON.parse(savedUser));
+          } catch {
+            localStorage.removeItem("duckzr_user");
+          }
     }
 
     if (savedToken) {
@@ -80,6 +101,7 @@ export function AuthProvider({
         setUser,
         setToken,
         logout,
+        refreshUser,
       }}
     >
       {children}
