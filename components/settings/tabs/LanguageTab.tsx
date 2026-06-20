@@ -119,8 +119,7 @@ export default function LanguageTab() {
         }
       );
 
-      if (setUser && user) {
-
+      if (user) {
         setUser({
           ...user,
           language: languageValue
@@ -132,7 +131,7 @@ export default function LanguageTab() {
         languageValue
       );
 
-      window.location.reload();
+      // removed reload (keeps state sync intact)
 
     } catch (error) {
 

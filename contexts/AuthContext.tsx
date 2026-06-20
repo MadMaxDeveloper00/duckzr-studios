@@ -25,6 +25,9 @@ type User = {
   verified?: boolean;
   banner?: string;
   twoFactorEnabled?: boolean;
+  language: string;
+  emailVerified?: boolean;
+  phoneVerified?: boolean;
 };
 
 type AuthContextType = {
