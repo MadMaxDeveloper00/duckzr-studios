@@ -57,12 +57,13 @@ export default function GamesSection() {
   }, [currentGame.id]);
 
   const currentTextTrailer = useMemo(() => {
-    switch(currentGame.id){
+    switch(currentGame?.id){
       case 1: return "texto da case 1";
       case 2: return "texto da case 2";
       case 3: return "texto da case 3";
+      default: return "";
     }
-  })
+  }, [currentGame?.id]);
 
   const nextGame =
     games[(current + 1) % games.length];
