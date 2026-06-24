@@ -279,7 +279,7 @@ export default function AuthCallbackPage() {
               avatar
                 ? avatar.startsWith("http")
                   ? avatar
-                  : `https://localhost:7071/avatars/${avatar}`
+                  : `duckzr-studios-api-production.up.railway.app/avatars/${avatar}`
                 : "/default.png"
             }
             alt="avatar"

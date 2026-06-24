@@ -108,7 +108,7 @@ export default function LanguageTab() {
         localStorage.getItem("token");
 
       await api.put(
-        "https://localhost:7071/api/user/language",
+        "https://duckzr-studios-api-production.up.railway.app/api/user/language",
         {
           language: languageValue
         },

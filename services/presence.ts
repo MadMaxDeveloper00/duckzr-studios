@@ -8,7 +8,7 @@ export const GetPresenceConnection = () => {
         new signalR.HubConnectionBuilder()
 
             .withUrl(
-                "https://localhost:7071/PresenceHub"
+                "https://duckzr-studios-api-production.up.railway.app/PresenceHub"
             )
 
             .withAutomaticReconnect()

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://localhost:7071/api",
+    baseURL: "https://duckzr-studios-api-production.up.railway.app/api",
     withCredentials: true
 });
 

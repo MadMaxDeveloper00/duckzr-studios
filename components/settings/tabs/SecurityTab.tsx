@@ -94,7 +94,7 @@ export default function SecurityTab() {
 
       const response =
         await fetch(
-          "https://localhost:7071/api/auth/sessions",
+          "duckzr-studios-api-production.up.railway.app/api/auth/sessions",
           {
             headers: {
               Authorization:
@@ -135,7 +135,7 @@ export default function SecurityTab() {
         localStorage.getItem("token");
 
       await fetch(
-        `https://localhost:7071/api/auth/revoke-session/${id}`,
+        `https://duckzr-studios-api-production.up.railway.app/api/auth/revoke-session/${id}`,
         {
           method: "POST",
 
@@ -193,7 +193,7 @@ export default function SecurityTab() {
 
       const response =
         await fetch(
-          "https://localhost:7071/api/auth/change-password",
+          "https://duckzr-studios-api-production.up.railway.app/api/auth/change-password",
           {
             method: "POST",
 

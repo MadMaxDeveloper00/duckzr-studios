@@ -103,7 +103,7 @@ export default function NotificationsTab() {
 
       const response =
         await api.get(
-          "https://localhost:7071/api/user/notifications",
+          "https://duckzr-studios-api-production.up.railway.app/api/user/notifications",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -198,7 +198,7 @@ export default function NotificationsTab() {
       setSaving(true);
 
       await api.post(
-        "https://localhost:7071/api/user/notifications",
+        "https://duckzr-studios-api-production.up.railway.app/api/user/notifications",
         {
           notificationsEnabled:
             globalEnabled,

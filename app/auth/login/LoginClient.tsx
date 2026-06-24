@@ -155,7 +155,7 @@ export default function LoginPage() {
             <div className="flex gap-3">
 
               {/* GOOGLE */}
-              <button onClick={() => {window.location.href ="https://localhost:7071/api/auth/login/google";}}
+              <button onClick={() => {window.location.href ="duckzr-studios-api-production.up.railway.app/api/auth/login/google";}}
                   className="w-full h-[58px] bg-white text-black rounded-full font-semibold flex items-center justify-center gap-3 hover:scale-[1.02] transition-all duration-300">
 
               <img src="https://www.svgrepo.com/show/475656/google-color.svg" className="w-5 h-5"/>
@@ -164,7 +164,7 @@ export default function LoginPage() {
               </button>
 
               {/* DISCORD */}
-              <button onClick={() => {window.location.href ="https://localhost:7071/api/auth/login/discord";}}
+              <button onClick={() => {window.location.href ="duckzr-studios-api-production.up.railway.app/api/auth/login/discord";}}
                   className="w-full h-[58px] bg-[#F2F3F5] text-black rounded-full font-semibold flex items-center justify-center gap-3 hover:scale-[1.02] transition-all duration-300">
               <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" className="w-5 h-5"/>
 

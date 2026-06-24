@@ -66,7 +66,7 @@ export default function LinkedAccountsTab() {
       setLoading(true);
 
       const response = await api.get(
-        "https://localhost:7071/api/user/me",
+        "duckzr-studios-api-production.up.railway.app/api/user/me",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -113,7 +113,7 @@ export default function LinkedAccountsTab() {
       setDisconnecting("Google");
 
       await api.post(
-        "https://localhost:7071/api/user/unlink-google",
+        "duckzr-studios-api-production.up.railway.app/api/user/unlink-google",
         {},
         {
           headers: {
@@ -147,7 +147,7 @@ export default function LinkedAccountsTab() {
       setDisconnecting("Discord");
 
       await api.post(
-        "https://localhost:7071/api/user/unlink-discord",
+        "duckzr-studios-api-production.up.railway.app/api/user/unlink-discord",
         {},
         {
           headers: {
@@ -177,12 +177,12 @@ export default function LinkedAccountsTab() {
   function linkGoogle() {
 
     window.location.href =
-      "https://localhost:7071/api/auth/login/google";
+      "https://duckzr-studios-api-production.up.railway.app/api/auth/login/google";
   }
 
   function linkDiscord() {
 
-    window.location.href = `https://localhost:7071/api/auth/login/discord?token=${token}`;
+    window.location.href = `https://duckzr-studios-api-production.up.railway.app/api/auth/login/discord?token=${token}`;
   }
 
   const linkedAccounts: LinkedAccount[] =

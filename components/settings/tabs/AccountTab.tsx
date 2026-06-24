@@ -79,7 +79,7 @@ export default function AccountTab() {
     try {
 
       const response = await fetch(
-        "https://localhost:7071/api/session/devices",
+        "https://duckzr-studios-api-production.up.railway.app/api/session/devices",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -148,7 +148,7 @@ export default function AccountTab() {
       setSaving(true);
 
       const response = await fetch(
-        "https://localhost:7071/api/user/update-profile",
+        "https://duckzr-studios-api-production.up.railway.app/api/user/update-profile",
         {
           method: "POST",
 
